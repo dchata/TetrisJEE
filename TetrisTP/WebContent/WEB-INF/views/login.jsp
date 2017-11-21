@@ -18,38 +18,32 @@
 <body>
 	<header class="col s12" style="background-color: #26a69a; margin-top: -1%; align: center;">
 		<div class="col s1">
-			<h4>Tetris - Bienvenue</h4>
+			<h4>Tetris - Connexion</h4>
 		</div>
 	</header>
-	<c:if test="${userLog == null}">
-		<div class="row">
-			<form class="col s12" style="align-content: center;">
-				<div class="row">
-					<div class="input-field col s2">
-						<i class="material-icons prefix">account_circle</i> 
-						<input placeholder="Login" id="first_name" type="text" class="validate">
-					</div>
+	<div class="row">
+		<form class="col s12" style="align-content: center;">
+			<div class="row">
+				<div class="input-field col s2">
+					<i class="material-icons prefix">account_circle</i> 
+					<input placeholder="Login" id="login" type="text" class="validate">
 				</div>
-				<div class="row">
-					<div class="input-field col s2">
-						<i class="material-icons prefix">https</i> 
-						<input placeholder="Password" id="password" type="password" class="validate">
-					</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s2">
+					<i class="material-icons prefix">https</i> 
+					<input placeholder="Password" id="password" type="password" class="validate">
 				</div>
-				<div class="row">
-					<button class="btn waves-effect waves-light" type="submit" name="action">OK
-	    				<i class="material-icons right">send</i>
-	  				</button>
-	  			</div>
-			</form>
-		</div>
-	</c:if>
+			</div>
+			<div class="row">
+				<button class="btn waves-effect waves-light" type="submit" name="action">OK
+    				<i class="material-icons right">send</i>
+  				</button>
+  			</div>
+		</form>
+	</div>
 	
-	<c:if test="${userLog != null}">
-	<h1>test ${userLog}</h1>
-	</c:if>
-	<script type="text/javascript"
-		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
