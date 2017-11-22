@@ -36,7 +36,7 @@
 						<td>${forme.color}</td>
 						<td>
 							<a class="waves-effect waves-teal btn-flat" href="${pageContext.request.contextPath}/edition?id=${forme.id}">Modifier</a>
-							<a class="waves-effect waves-teal btn-flat" href="home" name="delete" value="${forme.id}">Retirer</a>
+							<a class="waves-effect waves-teal btn-flat" href="list" name="delete" value="${forme.id}">Retirer</a>
 						</td>
 					</tr>
 				</c:forEach>

@@ -22,6 +22,10 @@
 		
 	<h3>Jeu ici</h3>
 	
+	<button class="btn waves-effect waves-light" type="submit">Déconnexion
+		<i class="material-icons right">https</i>
+	</button>
+	
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 </body>

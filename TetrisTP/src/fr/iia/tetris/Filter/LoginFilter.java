@@ -19,18 +19,17 @@ public class LoginFilter  implements javax.servlet.Filter
 		HttpServletRequest request = (HttpServletRequest)rq;
 		HttpServletResponse response = (HttpServletResponse)rp;
 		String verif = request.getRequestURI();
-		HttpSession  session = request.getSession();
-		String username = session.getAttribute("login").toString();
-		String pass = session.getAttribute("password").toString();
+		HttpSession session = request.getSession();
+		String username = (String)session.getAttribute("username");
 		
-		//Vérification de l'existence d'un utilisateur
-		if(username == null )
-			if(!verif.contains("/login"))
-				return;
-			else
-				return;
-		else
-			request.getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp");
+		//Vérification de l'existence d'une session utilisateur
+		if(username == null && !verif.contains("/login"))
+		{
+			response.sendRedirect("login");
+			return;
+		}
+		//else
+			//request.getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp");
 		
 		chain.doFilter(request, response);
 	}
