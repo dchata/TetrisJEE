@@ -9,18 +9,43 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-	<title>Tetris - Bienvenue</title>
+	<title>Tetris - Liste</title>
 </head>
 <body>
 	<header class="col s12" style="background-color: #26a69a; margin-top: -1%; align: center;">
 		<div class="col s1">
-			<h4>Tetris - Bienvenue</h4>
-			<a href="${pageContext.request.contextPath}/list" style="color: black">Tetriminos</a>
+			<h4>Tetris - Tetriminos</h4>
+			<a href="${pageContext.request.contextPath}/add" style="color: black">Ajouter</a>
 		</div>
 	</header>
-	<h5>Bienvenue, ${username}</h5>
-		
-	<h3>Jeu ici</h3>
+	<div class="row col s2">
+		<table>
+			<thead>
+	         		<tr>
+	           			<th>Id</th>
+	            		<th>Nom</th>
+	             		<th>Couleur</th>
+	             		<th>Actions</th>
+	         		</tr>
+	        	</thead>
+	        	<tbody>
+				<c:forEach items="${tetris}" var="forme">
+					<tr>
+						<td>${forme.id}</td>
+						<td>${forme.name}</td>
+						<td>${forme.color}</td>
+						<td>
+							<a class="waves-effect waves-teal btn-flat" href="${pageContext.request.contextPath}/edition?id=${forme.id}">Modifier</a>
+							<a class="waves-effect waves-teal btn-flat" href="home" name="delete" value="${forme.id}">Retirer</a>
+						</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	
+	
+	
 	
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>

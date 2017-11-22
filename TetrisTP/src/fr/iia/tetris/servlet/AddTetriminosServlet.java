@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class TetriminosServlet
+ * Servlet implementation class AddTetriminos
  */
-@WebServlet("/edition")
-public class TetriminosServlet extends HttpServlet {
+@WebServlet("/add")
+public class AddTetriminosServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public TetriminosServlet() {
+    public AddTetriminosServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,8 +26,8 @@ public class TetriminosServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		this.getServletContext().getRequestDispatcher("/WEB-INF/views/editTetriminos.jsp").forward(request , response );
+
+		this.getServletContext().getRequestDispatcher("/WEB-INF/views/addTetriminos.jsp").forward(request , response );
 	}
 
 	/**

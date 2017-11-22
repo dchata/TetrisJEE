@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,28 +8,28 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-<title>Tetris - Edition</title>
+<title>Tetris - Ajout</title>
 </head>
 <body>
 <header class="col s12" style="background-color: #26a69a; margin-top: -1%; align: center;">
 		<div class="col s1">
-			<h4>Tetris - Edition du Tetriminos ${forme.name}</h4>
+			<h4>Tetris - Ajout d'un Tetriminos</h4>
 		</div>
 	</header>
 	<div class="row">
 		<form class="col s12" style="align-content: center;">
 			<div class="row">
 				<div class="input-field col s2">
-					<input placeholder="Nom" id="name" type="text" class="validate" value=${forme.name}>
+					<input placeholder="Nom" name="name" id="name" type="text" class="validate">
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s2">
-					<input placeholder="Couleur" id="color" type="text" class="validate" value=${forme.color}>
+					<input placeholder="Couleur" name="color" id="color" type="text" class="validate">
 				</div>
 			</div>
 			<div class="row">
-				<button class="btn waves-effect waves-light" type="submit" name="action">Modifier
+				<button class="btn waves-effect waves-light" type="submit" name="action">Ajouter
 				<i class="material-icons right">send</i>
   				</button>
   			</div>
