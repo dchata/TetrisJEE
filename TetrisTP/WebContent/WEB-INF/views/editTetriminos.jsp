@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<button class="btn waves-effect waves-light" type="submit" name="action">Modifir
+				<button class="btn waves-effect waves-light" type="submit" name="action">Modifier
 				<i class="material-icons right">send</i>
   				</button>
   			</div>

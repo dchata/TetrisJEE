@@ -18,7 +18,6 @@ import fr.iia.tetris.model.Utilisateurs;
 @WebServlet("/home")
 public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -36,9 +35,8 @@ public class HomeServlet extends HttpServlet {
 		tetris.add(new Tetriminos(1, "L", "rouge"));
 		tetris.add(new Tetriminos(2, "Z", "jaune"));
 		tetris.add(new Tetriminos(3, "T", "vert"));
-		
 		request.setAttribute("tetris", tetris);
-		
+				
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request , response );
 	}
 
@@ -46,7 +44,6 @@ public class HomeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

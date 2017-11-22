@@ -9,6 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
 
 import fr.iia.tetris.model.Utilisateurs;
 
@@ -32,13 +35,30 @@ public class UserServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<Utilisateurs> users = new ArrayList<Utilisateurs>();
+		String userLog;
 		
 		users.add(new Utilisateurs(1, "dylan", "not24get"));
 		users.add(new Utilisateurs(2, "thomas", "password"));
-		users.add(new Utilisateurs(3, "john", "mdp"));
 		
 		request.setAttribute("users", users);
-		//request.setAttribute("userLog", "Dylan");
+
+		//Récupération valeurs saisies par l'utilisateur		
+		String username = (String)request.getParameter("login");
+		String password = (String)request.getParameter("password");
+		
+		for (Utilisateurs utilisateurs : users) //On regarde dans le tableau pour faire une vérif sur name et password
+		{
+			if(utilisateurs.getUsername().equals(username) && utilisateurs.getPassword().equals(password))//vérification saisie utilisateur pour la connexion
+			{
+				request.setAttribute("username", username);
+				response.sendRedirect("home");
+				return;
+			}
+			else
+			{
+				break;
+			}
+		}
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request , response );
 	}

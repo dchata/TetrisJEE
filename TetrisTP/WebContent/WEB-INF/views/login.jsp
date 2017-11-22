@@ -26,17 +26,17 @@
 			<div class="row">
 				<div class="input-field col s2">
 					<i class="material-icons prefix">account_circle</i> 
-					<input placeholder="Login" id="login" type="text" class="validate">
+					<input placeholder="Login" name="login" id="login" type="text" class="validate">
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s2">
 					<i class="material-icons prefix">https</i> 
-					<input placeholder="Password" id="password" type="password" class="validate">
+					<input placeholder="Password" name="password" id="password" type="password" class="validate">
 				</div>
 			</div>
 			<div class="row">
-				<button class="btn waves-effect waves-light" type="submit" name="action">OK
+				<button class="btn waves-effect waves-light" type="submit">OK
     				<i class="material-icons right">send</i>
   				</button>
   			</div>
