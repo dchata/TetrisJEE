@@ -1,6 +1,8 @@
 package fr.iia.tetris.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,10 +33,15 @@ public class AddTetriminosServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
+		
+		ArrayList<Tetriminos> tetriminos = (ArrayList<Tetriminos>)request.getServletContext().getAttribute("tetris");
+		
 		String name = (String)request.getParameter("name");
 		String color = (String)request.getParameter("color");
 		
-		//fr.iia.tetris.listener.Listener.class.
+		int lastId = tetriminos.size() + 1;
+		
+		tetriminos.add(new Tetriminos(lastId, name, color)); //ajout de tetriminos
 			
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/addTetriminos.jsp").forward(request , response);
 	}
