@@ -15,6 +15,7 @@
 	<header class="col s12" style="background-color: #26a69a; margin-top: -1%; align: center;">
 		<div class="col s1">
 			<h4>Tetris - Tetriminos</h4>
+			<a href="${pageContext.request.contextPath}/home" style="color: black">Accueil</a>
 			<a href="${pageContext.request.contextPath}/add" style="color: black">Ajouter</a>
 		</div>
 	</header>

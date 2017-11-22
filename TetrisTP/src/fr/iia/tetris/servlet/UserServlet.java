@@ -35,8 +35,6 @@ public class UserServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<Utilisateurs> users = new ArrayList<Utilisateurs>();
-		String userLog;
-		Boolean ok;
 		
 		users.add(new Utilisateurs(1, "dylan", "not24get"));
 		users.add(new Utilisateurs(2, "thomas", "password"));

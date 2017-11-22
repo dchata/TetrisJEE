@@ -30,13 +30,6 @@ public class ListTetriminosServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		ArrayList<Tetriminos> tetris = new ArrayList<Tetriminos>();
-		
-		tetris.add(new Tetriminos(1, "L", "rouge"));
-		tetris.add(new Tetriminos(2, "Z", "jaune"));
-		tetris.add(new Tetriminos(3, "T", "vert"));
-		request.setAttribute("tetris", tetris);
 		
 		/*int idT = (int)request.getAttribute("delete");
 		tetris.remove(idT);*/

@@ -7,6 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sun.javafx.property.adapter.PropertyDescriptor.Listener;
+
+import fr.iia.tetris.model.Tetriminos;
+import fr.iia.tetris.model.Utilisateurs;
+
 /**
  * Servlet implementation class AddTetriminos
  */
@@ -25,9 +30,13 @@ public class AddTetriminosServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		this.getServletContext().getRequestDispatcher("/WEB-INF/views/addTetriminos.jsp").forward(request , response );
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
+		String name = (String)request.getParameter("name");
+		String color = (String)request.getParameter("color");
+		
+		//fr.iia.tetris.listener.Listener.class.
+			
+		this.getServletContext().getRequestDispatcher("/WEB-INF/views/addTetriminos.jsp").forward(request , response);
 	}
 
 	/**
