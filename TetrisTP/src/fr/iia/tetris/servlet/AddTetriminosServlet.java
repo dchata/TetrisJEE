@@ -41,7 +41,7 @@ public class AddTetriminosServlet extends HttpServlet {
 		
 		int lastId = tetriminos.size() + 1;
 		
-		tetriminos.add(new Tetriminos(lastId, name, color)); //ajout de tetriminos
+		//tetriminos.add(new Tetriminos(lastId, name, color)); //ajout de tetriminos
 			
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/addTetriminos.jsp").forward(request , response);
 	}

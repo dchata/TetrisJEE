@@ -1,16 +1,23 @@
 package fr.iia.tetris.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Utilisateurs")
 public class Utilisateurs {
+	@Id
+	@Column(name="Id")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	@Column(name="Username")
 	private String username;
+	@Column(name="Password")
 	private String password;
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	
 	public String getUsername() {
 		return username;
@@ -26,11 +33,11 @@ public class Utilisateurs {
 		this.password = password;
 	}
 	
-	public Utilisateurs(){}
+	/*public Utilisateurs(){}
 	
 	public Utilisateurs(int idUser, String nom, String mdp) {
 		id = idUser;
 		username = nom;
 		password = mdp;
-	}
+	}*/
 }

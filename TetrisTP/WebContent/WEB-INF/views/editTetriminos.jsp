@@ -15,6 +15,7 @@
 <header class="col s12" style="background-color: #26a69a; margin-top: -1%; align: center;">
 		<div class="col s1">
 			<h4>Tetris - Edition du Tetriminos ${forme.name}</h4>
+			<a href="${pageContext.request.contextPath}/list" style="color: black">Tetriminos</a>
 		</div>
 	</header>
 	<div class="row">

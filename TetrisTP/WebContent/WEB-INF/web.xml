@@ -9,6 +9,18 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+
+<!-- Chargement du contexte Spring (application-context.xml) -->
+<context-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>/WEB-INF/application-context.xml</param-value>
+</context-param>
+
+<!-- Chargement du context Spring Web : création de ApplicationContext -->
+<listener>
+	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+  
   <listener>
   	<listener-class>fr.iia.tetris.listener.Listener</listener-class>
   </listener>
