@@ -6,6 +6,26 @@
   <packaging>war</packaging>
   
 	<dependencies>
+	
+
+<!-- Spring Web MVC -->
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-webmvc</artifactId>
+	<version>4.3.3.RELEASE</version>
+</dependency>
+
+	
+
+<!-- JSP Tiles -->
+<dependency>
+	<groupId>org.apache.tiles</groupId>
+	<artifactId>tiles-jsp</artifactId>
+	<version>3.0.7</version>
+</dependency>
+
+	
+	
 		<!-- JSTL 1.2 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>

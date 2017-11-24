@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- Configuration du layout principal -->
+	<definition name="base.definition" template="/WEB-INF/views/structure.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<!-- Configuration de la vue "login" -->
+	<definition name="login" extends="base.definition">
+		<put-attribute name="header" value="Tetris - Connexion" />
+		<put-attribute name="title" value="Connexion" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+
+	<!-- Configuration de la vue "home" -->
+	<definition name="home" extends="base.definition">
+		<put-attribute name="header" value="Tetris - Accueil" />
+		<put-attribute name="title" value="Accueil" />
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+	</definition>
+
+	<!-- Configuration de la vue "listTetriminos" -->
+	<definition name="listTetriminos" extends="base.definition">
+		<put-attribute name="header" value="Tetris - Liste Tetriminos" />
+		<put-attribute name="title" value="Tetriminos" />
+		<put-attribute name="body" value="/WEB-INF/views/listTetriminos.jsp" />
+	</definition>
+	
+	<!-- Configuration de la vue "addTetriminos" -->
+	<definition name="addTetriminos" extends="base.definition">
+		<put-attribute name="header" value="Tetris - Ajout" />
+		<put-attribute name="title" value="Ajout d'un tetrimino" />
+		<put-attribute name="body" value="/WEB-INF/views/addTetriminos.jsp" />
+	</definition>
+	
+	<!-- Configuration de la vue "editTetriminos" -->
+	<definition name="editTetriminos" extends="base.definition">
+		<put-attribute name="header" value="Tetris - Edition" />
+		<put-attribute name="title" value="Edition d'un tetrimino" />
+		<put-attribute name="body" value="/WEB-INF/views/editTetriminos.jsp" />
+	</definition>
+	
+</tiles-definitions>
+

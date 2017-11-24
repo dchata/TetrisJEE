@@ -15,7 +15,8 @@ import javax.servlet.http.HttpSession;
 public class LoginFilter  implements javax.servlet.Filter
 {
 	@Override
-	public void doFilter(ServletRequest rq, ServletResponse rp, FilterChain chain) throws IOException, ServletException {
+	public void doFilter(ServletRequest rq, ServletResponse rp, FilterChain chain) throws IOException, ServletException 
+	{
 		HttpServletRequest request = (HttpServletRequest)rq;
 		HttpServletResponse response = (HttpServletResponse)rp;
 		String verif = request.getRequestURI();
@@ -28,8 +29,6 @@ public class LoginFilter  implements javax.servlet.Filter
 			response.sendRedirect("login");
 			return;
 		}
-		//else
-			//request.getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp");
 		
 		chain.doFilter(request, response);
 	}

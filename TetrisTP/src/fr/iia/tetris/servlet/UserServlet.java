@@ -16,7 +16,7 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import fr.iia.tetris.dao.IDAO;
 import fr.iia.tetris.model.Utilisateurs;
 
-@WebServlet("/login")
+//@WebServlet("/login")
 public class UserServlet extends HttpServlet 
 {
 	@Autowired

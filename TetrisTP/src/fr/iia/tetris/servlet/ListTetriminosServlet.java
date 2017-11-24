@@ -16,7 +16,7 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import fr.iia.tetris.dao.IDAO;
 import fr.iia.tetris.model.Tetriminos;
 
-@WebServlet("/list")
+//@WebServlet("/list")
 public class ListTetriminosServlet extends HttpServlet 
 {
 	@Autowired
